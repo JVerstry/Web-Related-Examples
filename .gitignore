@@ -6,3 +6,4 @@
 *.ear
 /Standalone-Hibernate-JPA/target/
 /Container-Dependent-Application/target/
+/Container-Dependent-Application/nbactions.xml
