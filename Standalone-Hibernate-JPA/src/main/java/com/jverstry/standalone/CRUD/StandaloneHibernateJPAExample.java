@@ -1,5 +1,5 @@
 
-package com.jverstry.standalone;
+package com.jverstry.standalone.CRUD;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

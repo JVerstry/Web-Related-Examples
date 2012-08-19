@@ -1,5 +1,5 @@
 
-package com.jverstry.standalone;
+package com.jverstry.standalone.CRUD;
 
 import java.io.Serializable;
 import javax.persistence.Entity;

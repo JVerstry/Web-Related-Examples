@@ -4,3 +4,5 @@
 *.jar
 *.war
 *.ear
+/Standalone-Hibernate-JPA/target/
+/Container-Dependent-Application/target/
