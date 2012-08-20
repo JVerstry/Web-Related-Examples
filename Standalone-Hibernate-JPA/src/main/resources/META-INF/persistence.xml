@@ -3,7 +3,7 @@
     <persistence-unit name="Standalone" transaction-type="RESOURCE_LOCAL">
 
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<class>com.jverstry.standalone.Item</class>
+		<class>com.jverstry.standalone.CRUD.Item</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
