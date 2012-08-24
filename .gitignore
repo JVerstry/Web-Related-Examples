@@ -7,3 +7,5 @@
 /Standalone-Hibernate-JPA/target/
 /Container-Dependent-Application/target/
 /Container-Dependent-Application/nbactions.xml
+/Spring-Standalone-Application/target/
+/Spring-IoC-Container/target/

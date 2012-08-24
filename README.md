@@ -1,4 +1,4 @@
 Web-Related-Examples
 ====================
 
-A set of spring related examples from http://tshikatshikaaa.blogspot.com
+A set of web related examples from http://tshikatshikaaa.blogspot.com
