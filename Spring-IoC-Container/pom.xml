@@ -3,16 +3,17 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.jverstry</groupId>
-  <artifactId>dependency-injection-spring</artifactId>
+  <artifactId>spring-ioc-container</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>Dependency-Injection-Spring</name>
+  <name>Spring-IoC-Container</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
+		<spring.version>3.1.2.RELEASE</spring.version>
 	</properties>
 
 	<build>
@@ -30,6 +31,12 @@
 	</build>
 
 	<dependencies>
+	  <dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context</artifactId>
+	    <version>${spring.version}</version>
+	    <type>jar</type>
+	  </dependency>
 	</dependencies>
 
 </project>
