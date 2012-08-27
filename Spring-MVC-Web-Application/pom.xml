@@ -74,6 +74,29 @@
 			<artifactId>cglib-nodep</artifactId>
 			<version>2.1_3</version>
 		</dependency>
+		<!-- Adding JSP taglibs (JSLT) -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.1.2</version>
+		</dependency>		
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>c</artifactId>
+			<version>1.1.2</version>
+			<type>tld</type>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>fmt</artifactId>
+			<version>1.1.2</version>
+			<type>tld</type>
+		</dependency>
 		<!-- Tomcat -->
 		<dependency>
 			<groupId>javax</groupId>
