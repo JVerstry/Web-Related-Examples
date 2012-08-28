@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>rebuild</actionName>
+            <goals>
+                <goal>clean</goal>
+                <goal>install</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-Tomcat:run</actionName>
+            <displayName>Tomcat:run</displayName>
+            <goals>
+                <goal>tomcat:run</goal>
+            </goals>
+        </action>
+        
+    </actions>
