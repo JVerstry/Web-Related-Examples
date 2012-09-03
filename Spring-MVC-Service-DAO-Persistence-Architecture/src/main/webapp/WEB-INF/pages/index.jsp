@@ -8,9 +8,8 @@
 </head>
 <body>
     <h1>
-      Welcome To The Simple Spring JPA Web Application !!!
+      Welcome To The Spring Architecture Roundtrip Web Application !!!
     </h1>
-	The persistence status is: <c:out value="${PersistenceStatus}" /> !<br /><br />
 	<a href="<c:url value='/roundtrip'/>">Roundtrip</a>
 </body>
 </html>

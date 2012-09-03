@@ -17,8 +17,6 @@ public class MyController {
 	@RequestMapping(value = "/")
 	public String home(Model model) {
 		
-		model.addAttribute("PersistenceStatus", myService.getPersistenceStatus());
-		
 		return "index";
 		
 	}
@@ -27,15 +25,6 @@ public class MyController {
     public String persistenceStatus(Model model) {
         
 		MilliTimeItem retr = myService.createAndRetrieve();
-		
-//		StringBuilder sb = new StringBuilder("<br />");
-//		for (Exception e : myService.getExceptions()) {
-//			sb.append(e.toString()).append("<br />");
-//		}
-		
-		model.addAttribute("Exceptions", myService.getExceptions());
-		
-		model.addAttribute("IsNull", (retr==null));
 		model.addAttribute("RoundTrip", retr);
 		
 		return "roundtrip";
