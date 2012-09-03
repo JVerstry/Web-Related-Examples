@@ -10,6 +10,6 @@
     <h1>
       Welcome To The Spring Architecture Roundtrip Web Application !!!
     </h1>
-	<a href="<c:url value='/roundtrip'/>">Roundtrip</a>
+	<a href="<c:url value='/roundtrip'/>">Architecture Roundtrip</a>
 </body>
 </html>

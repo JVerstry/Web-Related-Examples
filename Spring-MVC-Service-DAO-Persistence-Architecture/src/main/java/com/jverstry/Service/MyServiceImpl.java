@@ -14,7 +14,6 @@ public class MyServiceImpl implements MyService {
 	public MilliTimeItem createAndRetrieve() {
 		
 		long id = myDAO.createMilliTimeItem();
-		System.out.println("Milli time id = " + id);
 		
 		return myDAO.getMilliTimeItem(id);
 		
