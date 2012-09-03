@@ -20,50 +20,50 @@ public class JpaConfig {
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(){
       
-	    LocalContainerEntityManagerFactoryBean factoryBean
+	    LocalContainerEntityManagerFactoryBean lcemfb
             = new LocalContainerEntityManagerFactoryBean();
 	   
-        factoryBean.setDataSource( this.restDataSource() );
-        factoryBean.setPackagesToScan( new String[ ] { "com.jverstry" } );
-		factoryBean.setPersistenceUnitName("MyPU");
+        lcemfb.setDataSource(this.dataSource());
+        lcemfb.setPackagesToScan(new String[] {"com.jverstry"});
+		lcemfb.setPersistenceUnitName("MyPU");
       
-        HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-		factoryBean.setJpaVendorAdapter( vendorAdapter );
+        HibernateJpaVendorAdapter va = new HibernateJpaVendorAdapter();
+		lcemfb.setJpaVendorAdapter(va);
 		
-		Properties props = new Properties();
-		props.put("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
-		props.put("hibernate.hbm2ddl.auto", "create");
-		factoryBean.setJpaProperties(props);
+		Properties ps = new Properties();
+		ps.put("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
+		ps.put("hibernate.hbm2ddl.auto", "create");
+		lcemfb.setJpaProperties(ps);
 		
-		factoryBean.afterPropertiesSet();
+		lcemfb.afterPropertiesSet();
 
-        return factoryBean;
+        return lcemfb;
 		
     }
 	
     @Bean
-    public DataSource restDataSource(){
+    public DataSource dataSource(){
    	   
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        DriverManagerDataSource ds = new DriverManagerDataSource();
 		
-        dataSource.setDriverClassName("org.hsqldb.jdbcDriver");
-        dataSource.setUrl("jdbc:hsqldb:mem:testdb");
-        dataSource.setUsername("sa");
-        dataSource.setPassword("");
+        ds.setDriverClassName("org.hsqldb.jdbcDriver");
+        ds.setUrl("jdbc:hsqldb:mem:testdb");
+        ds.setUsername("sa");
+        ds.setPassword("");
 	  
-        return dataSource;
+        return ds;
 	  
     }
    
     @Bean
     public PlatformTransactionManager transactionManager(){
 	   
-        JpaTransactionManager transactionManager = new JpaTransactionManager();
+        JpaTransactionManager tm = new JpaTransactionManager();
       
-	    transactionManager.setEntityManagerFactory(
+	    tm.setEntityManagerFactory(
             this.entityManagerFactoryBean().getObject() );
       
-        return transactionManager;
+        return tm;
 		
     }
    
