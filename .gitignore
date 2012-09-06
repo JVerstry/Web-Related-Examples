@@ -17,3 +17,11 @@
 /Spring-MVC-Web-Application/nbactions.xml
 /Spring-MVC-Annotations/target/
 /Spring-MVC-With-Annotations/target/
+/Spring-JPA-Web-Application/target/
+/Spring-JPA-Roundtrip/target/
+/Spring-Web-JPA-Roundtrip/target
+/Spring-MVC-Service-DAO-Persistence-Architecture/target/
+/Spring-Web-JPA-Testing/target/
+/Spring-MVC-Testing/target/
+/Spring-MVC-Ajax-JSON/target/
+/Spring-MVC-JUnit-Testing/target/

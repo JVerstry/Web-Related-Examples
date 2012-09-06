@@ -1,8 +1,6 @@
 
 package com.jverstry.Configuration;
 
-import com.jverstry.Roundtrip.MyController;
-import com.jverstry.Roundtrip.MyRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
