@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-Tomcat Run</actionName>
+            <displayName>Tomcat Run</displayName>
+            <goals>
+                <goal>tomcat:run</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-Cargo Deploy</actionName>
+            <displayName>Cargo Deploy</displayName>
+            <goals>
+                <goal>cargo:deployer-deploy</goal>
+            </goals>
+        </action>
+    </actions>
