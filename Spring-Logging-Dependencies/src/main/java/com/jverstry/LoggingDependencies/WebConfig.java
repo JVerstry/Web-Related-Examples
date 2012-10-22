@@ -1,5 +1,5 @@
 
-package com.jverstry.LoginLogout;
+package com.jverstry.LoggingDependencies;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

@@ -11,7 +11,7 @@
 	<context-param>
     	<param-name>contextConfigLocation</param-name>
     	<param-value>
-			com.jverstry.LoginLogout
+			com.jverstry.LoggingDependencies
 		</param-value>
 	</context-param>
 

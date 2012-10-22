@@ -3,9 +3,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Welcome To MVC Customized Login Logout!!!</title>
+  <title>Welcome To The Spring Logging Example !!!</title>
 </head>
   <body>
-    <h1>Spring MVC Customized Login Logout !!!</h1>
+    <h1>Spring Logging Example !!!</h1>
+	<c:out value="${LogMsg}" /><br />
   </body>
 </html>
