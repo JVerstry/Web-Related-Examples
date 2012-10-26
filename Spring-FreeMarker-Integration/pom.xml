@@ -36,11 +36,11 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- Sitemesh -->
+		<!-- FreeMarker -->
 		<dependency>
-			<groupId>opensymphony</groupId>
-			<artifactId>sitemesh</artifactId>
-			<version>2.4.2</version>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.19</version>
 		</dependency>
 
 		<!-- CGLIB, only required and used for @Configuration usage -->
@@ -55,19 +55,6 @@
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>javax.servlet.jsp</groupId>
-			<artifactId>jsp-api</artifactId>
-			<version>2.1</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
 		</dependency>
 
 	</dependencies>
@@ -91,7 +78,7 @@
 					<port>8282</port>
 				</configuration>
 			</plugin>
-		</plugins>
 
+		</plugins>
 	</build>
 </project>

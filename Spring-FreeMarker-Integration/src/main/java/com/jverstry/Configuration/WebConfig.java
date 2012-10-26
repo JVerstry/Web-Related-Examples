@@ -7,7 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
 @EnableWebMvc
 @Configuration
@@ -17,12 +18,24 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public ViewResolver getViewResolver() {
 		
-		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-		resolver.setPrefix("WEB-INF/pages/");
-		resolver.setSuffix(".jsp");
+		FreeMarkerViewResolver resolver = new FreeMarkerViewResolver();
+		resolver.setCache(false);
+//		resolver.setPrefix("");
+		resolver.setSuffix(".ftl");
 
 		return resolver;
 		
 	}
+	
+	@Bean
+	public FreeMarkerConfigurer getFreemarkerConfig() {
+		
+		FreeMarkerConfigurer result = new FreeMarkerConfigurer();
+		
+		result.setTemplateLoaderPath("WEB-INF/pages/");
+		
+		return result;
+		
+	}	
 	
 }
