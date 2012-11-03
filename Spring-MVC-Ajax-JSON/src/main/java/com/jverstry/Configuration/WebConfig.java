@@ -1,8 +1,6 @@
 
 package com.jverstry.Configuration;
 
-import com.jverstry.Service.MyService;
-import com.jverstry.Service.MyServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -25,11 +23,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
 		return resolver;
 		
-	}
-	
-	@Bean
-	public MyService getMyService() {
-		return new MyServiceImpl();
 	}
 	
 }

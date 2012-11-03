@@ -1,21 +1,15 @@
 
 package com.jverstry.Item;
 
-import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import org.pojomatic.Pojomatic;
-import org.pojomatic.annotations.AutoProperty;
-
-@Entity
-@AutoProperty
-public class MilliTimeItem implements Serializable {
+public class MilliTimeItem {
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long ID;
+	
+	public MilliTimeItem() { }
+	
+	public MilliTimeItem(long init) {
+		this.ID = init;
+	}
 	
 	private long milliTime = 0;
 	
@@ -31,19 +25,4 @@ public class MilliTimeItem implements Serializable {
 		this.milliTime = milliTime;
 	}
 	
-	@Override
-	public boolean equals(Object o) {
-		return Pojomatic.equals(this, o);
-	}
-
-	@Override
-	public int hashCode() {
-		return Pojomatic.hashCode(this);
-	}
-
-	@Override
-	public String toString() {
-		return Pojomatic.toString(this);
-	}
-
 }
