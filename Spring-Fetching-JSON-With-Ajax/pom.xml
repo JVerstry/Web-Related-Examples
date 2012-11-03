@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.jverstry</groupId>
-	<artifactId>spring-mvc-ajax-json</artifactId>
+	<artifactId>spring-fetching-json-with-ajax</artifactId>
 	<version>1.0.0</version>
-	<name>Spring-MVC-Ajax-JSON</name>
+	<name>Spring-Fetching-JSON-With-Ajax</name>
 	<packaging>war</packaging>
 
 	<properties>
