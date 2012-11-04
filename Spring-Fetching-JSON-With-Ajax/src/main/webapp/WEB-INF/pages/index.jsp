@@ -3,13 +3,20 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Welcome !!!</title>
+  <meta http-equiv="Content-Type" content="text/html;" charset=UTF-8">
+  <script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+  </script>
+  <script type="text/javascript"
+	src="<c:url value='/resources/js/FetchingJsonWithAjax.js'/>">
+  </script>
+  <title>Welcome To Fetching JSON With Ajax !!!</title>
 </head>
 <body>
-    <h1>
-      Welcome To The Spring Architecture Roundtrip Web Application !!!
-    </h1>
-	<a href="<c:url value='/roundtrip'/>">Architecture Roundtrip</a>
+    <h1>Fetching JSON With Ajax !!!</h1>
+	<div id="theJson"></div>
+	<button type="button" onclick="fetch_json()">
+		Fetch JSON
+	</button> 
 </body>
 </html>

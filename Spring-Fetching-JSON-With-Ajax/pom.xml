@@ -43,19 +43,11 @@
 			<version>1.2</version>
 		</dependency>
 
-	    <dependency>
-			<groupId>javax</groupId>
-			<artifactId>javaee-api</artifactId>
-			<version>6.0</version>
-			<type>jar</type>
- 		    <scope>provided</scope>
-		</dependency>
-
+		<!-- Jackson JSON Mapper -->
 		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
-			<version>1.0.0.GA</version>
-			<scope>test</scope>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.10</version>
 		</dependency>
         
 	</dependencies>

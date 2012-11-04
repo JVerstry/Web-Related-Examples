@@ -3,18 +3,12 @@ package com.jverstry.Item;
 
 public class MilliTimeItem {
 	
-	private long ID;
+	private long milliTime = 0;
 	
 	public MilliTimeItem() { }
 	
 	public MilliTimeItem(long init) {
-		this.ID = init;
-	}
-	
-	private long milliTime = 0;
-	
-	public long getID() {
-		return ID;
+		this.milliTime = init;
 	}
 
 	public long getMilliTime() {

@@ -5,6 +5,8 @@ import com.jverstry.Item.MilliTimeItem;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class MyController {
@@ -14,13 +16,10 @@ public class MyController {
 		return "index";
 	}
 	
-    @RequestMapping(value = "/roundtrip")
-    public String persistenceStatus(Model model) {
-        
-		MilliTimeItem retr = new MilliTimeItem();
-		model.addAttribute("RoundTrip", retr);
+	@RequestMapping(value="/getJSON", method = RequestMethod.GET)
+    public @ResponseBody MilliTimeItem getJSON() {
 		
-		return "roundtrip";
+		return new MilliTimeItem(System.currentTimeMillis());
 		
     }	
 	
