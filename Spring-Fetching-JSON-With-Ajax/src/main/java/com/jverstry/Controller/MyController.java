@@ -18,9 +18,7 @@ public class MyController {
 	
 	@RequestMapping(value="/getJSON", method = RequestMethod.GET)
     public @ResponseBody MilliTimeItem getJSON() {
-		
 		return new MilliTimeItem(System.currentTimeMillis());
-		
-    }	
+    }
 	
 }
