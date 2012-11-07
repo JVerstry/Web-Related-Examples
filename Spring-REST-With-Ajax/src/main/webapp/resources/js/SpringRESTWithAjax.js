@@ -5,7 +5,7 @@ var RestGet = function() {
 	
     $.ajax({
         type: 'GET',
-        url:  prefix + "/MyData",
+        url:  prefix + "/MyData/" + Date.now(),
 		dataType: 'json',
         async: true,
         success: function(result) {
@@ -21,9 +21,15 @@ var RestGet = function() {
 
 var RestPut = function() {
 	
+	var JSONObject= {
+		"time": Date.now(),
+		"message":"User PUT call !!!"};
+	
     $.ajax({
         type: 'PUT',
         url:  prefix + "/MyData",
+		contentType: "application/json; charset=utf-8",		
+		data: JSON.stringify(JSONObject),
 		dataType: 'json',
         async: true,
         success: function(result) {
@@ -59,7 +65,7 @@ var RestDelete = function() {
 	
     $.ajax({
         type: 'DELETE',
-        url:  prefix + "/MyData",
+        url:  prefix + "/MyData/" + Date.now(),
 		dataType: 'json',
         async: true,
         success: function(result) {
