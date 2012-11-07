@@ -23,7 +23,8 @@ var RestPut = function() {
 	
 	var JSONObject= {
 		"time": Date.now(),
-		"message":"User PUT call !!!"};
+		"message": "User PUT call !!!"
+	};
 	
     $.ajax({
         type: 'PUT',
