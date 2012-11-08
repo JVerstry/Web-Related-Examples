@@ -10,10 +10,10 @@
   <script type="text/javascript"
 	src="<c:url value='/resources/js/SpringServerSideRestCall.js'/>">
   </script>  
-  <title>Welcome To REST With Ajax !!!</title>
+  <title>Welcome To REST With Java !!!</title>
 </head>
 <body>
-  <h1>Welcome To REST With Ajax !!!</h1>
+  <h1>Welcome To REST With Java !!!</h1>
   <button type="button" onclick="RestGet()">GET</button>  
 </body>
 </html>
