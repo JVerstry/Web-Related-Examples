@@ -7,7 +7,7 @@
   <title>Welcome To REST With HTML Only !!!</title>
 </head>
 <body>
-    <h1>Welcome To REST With HTML Only !!!</h1>
+    <h1>REST With HTML Only !!!</h1>
     <form action="<c:url value='/MyData/123466/'/>"
 		  method="post" >
         <input type="hidden" name="_method" value="GET">	  
