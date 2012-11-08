@@ -32,6 +32,16 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
+	<filter>
+		<filter-name>hiddenHttpMethodFilter</filter-name>
+		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>hiddenHttpMethodFilter</filter-name>
+		<servlet-name>MyServlet</servlet-name>
+	</filter-mapping>
+
 	<welcome-file-list>
 		<welcome-file></welcome-file>
 	</welcome-file-list>

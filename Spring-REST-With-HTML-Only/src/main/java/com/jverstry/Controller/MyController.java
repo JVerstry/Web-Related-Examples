@@ -13,14 +13,4 @@ public class MyController {
 		return "index";
 	}
 	
-    @RequestMapping(value = "/roundtrip")
-    public String persistenceStatus(Model model) {
-        
-//		MilliTimeItem retr = new MilliTimeItem();
-//		model.addAttribute("RoundTrip", retr);
-		
-		return "roundtrip";
-		
-    }	
-	
 }
