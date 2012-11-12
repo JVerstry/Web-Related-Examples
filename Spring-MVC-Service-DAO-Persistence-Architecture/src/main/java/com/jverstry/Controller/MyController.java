@@ -24,7 +24,9 @@ public class MyController {
     @RequestMapping(value = "/roundtrip")
     public String persistenceStatus(Model model) {
         
-		MilliTimeItem retr = myService.createAndRetrieve();
+		long id = myService.create();
+		MilliTimeItem retr = myService.retrieve(id);
+		
 		model.addAttribute("RoundTrip", retr);
 		
 		return "roundtrip";

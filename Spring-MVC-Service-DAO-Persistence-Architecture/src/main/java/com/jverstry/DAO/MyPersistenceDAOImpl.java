@@ -2,9 +2,6 @@
 package com.jverstry.DAO;
 
 import com.jverstry.Item.MilliTimeItem;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
@@ -17,7 +14,6 @@ public class MyPersistenceDAOImpl implements MyPersistenceDAO {
 	private EntityManager em;	
 	
 	@Override
-	@Transactional
 	public long createMilliTimeItem() {
 		
 		MilliTimeItem mti = new MilliTimeItem();
@@ -32,7 +28,6 @@ public class MyPersistenceDAOImpl implements MyPersistenceDAO {
 	}
 
 	@Override
-	@Transactional
 	public MilliTimeItem getMilliTimeItem(long id) {
 		
 		return em.find(MilliTimeItem.class, id);

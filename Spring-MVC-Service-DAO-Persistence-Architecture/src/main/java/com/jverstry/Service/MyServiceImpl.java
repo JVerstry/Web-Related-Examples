@@ -11,12 +11,13 @@ public class MyServiceImpl implements MyService {
     private MyPersistenceDAO myDAO;	
 
 	@Override
-	public MilliTimeItem createAndRetrieve() {
-		
-		long id = myDAO.createMilliTimeItem();
-		
+	public long create() {
+		return myDAO.createMilliTimeItem();
+	}
+
+	@Override
+	public MilliTimeItem retrieve(long id) {
 		return myDAO.getMilliTimeItem(id);
-		
 	}
 	
 }
