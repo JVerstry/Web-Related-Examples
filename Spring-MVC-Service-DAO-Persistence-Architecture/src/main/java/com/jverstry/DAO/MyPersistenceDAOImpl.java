@@ -5,7 +5,6 @@ import com.jverstry.Item.MilliTimeItem;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public class MyPersistenceDAOImpl implements MyPersistenceDAO {
@@ -29,9 +28,7 @@ public class MyPersistenceDAOImpl implements MyPersistenceDAO {
 
 	@Override
 	public MilliTimeItem getMilliTimeItem(long id) {
-		
 		return em.find(MilliTimeItem.class, id);
-		
 	}
 	
 }
