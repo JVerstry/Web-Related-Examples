@@ -1,5 +1,5 @@
 
-package com.jverstry.Configuration.Service;
+package com.jverstry.Service;
 
 public interface MyService {
 	

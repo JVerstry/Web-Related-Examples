@@ -1,7 +1,7 @@
 
-package com.jverstry.Configuration.Controller;
+package com.jverstry.Controller;
 
-import com.jverstry.Configuration.Service.MyService;
+import com.jverstry.Service.MyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
