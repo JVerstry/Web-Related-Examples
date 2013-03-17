@@ -17,7 +17,7 @@ table {
 }
 
 table td, table th {
-    padding: 0px;
+    padding: 0px 2px 0px 2px;
     border: 0px;
 }
 

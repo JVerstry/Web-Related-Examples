@@ -1,7 +1,7 @@
-
 package com.jverstry.Controller;
 
-import com.jverstry.UserDetailsManager.PracticalUserDetailsManager;
+import com.jverstry.DAO.PracticalUserDetailsImpl;
+import com.jverstry.UserDetailsService.PracticalUserDetailsServiceInMemory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
@@ -14,32 +14,31 @@ import org.springframework.web.servlet.ModelAndView;
 public class MyController {
 	
     @Autowired
-    private PracticalUserDetailsManager pudm;
+    private PracticalUserDetailsServiceInMemory pudm;
 
 	@RequestMapping(value = "/")
 	public ModelAndView index() {
         
         ModelAndView result = new ModelAndView("index");
-        
+
         result.addObject("users", this.pudm.getUsers());
-        result.addObject("errorMsg", "");
         
         return result;
         
     }
 	
-	@RequestMapping(value = "/delete/{name}")
-	public ModelAndView delete(
-            @PathVariable(value="name")
+	@RequestMapping(value = "/delete/{id}")
+	public String delete(
+            @PathVariable(value="id")
             String id) {
         
-        this.pudm.deleteUser(id);
+        this.pudm.deleteUser(Long.parseLong(id));
         
-        return index();
+        return "redirect:/";
         
     }
     
-    @RequestMapping(value = "/add")
+    @RequestMapping(value = "/create")
     @SuppressWarnings("AssignmentToMethodParameter")
 	public ModelAndView add(
             @RequestParam(value="name")
@@ -61,13 +60,17 @@ public class MyController {
             errorMsg += "Password is empty ";
         }
         
-        ModelAndView result = new ModelAndView("index");
+        if ( errorMsg.isEmpty() ) {
+            this.pudm.upsertUser(new PracticalUserDetailsImpl(name, password));
+        }
+    
+        ModelAndView result = new ModelAndView("create");
         
         result.addObject("errorMsg", errorMsg);
-        result.addObject("users", this.pudm.getUsers());
+        result.addObject("username", name);
         
 		return result;
         
-	}
-    
+    }
+        
 }

@@ -7,15 +7,14 @@
     http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
     <http auto-config="true">
-        <intercept-url pattern="/*" access="ROLE_USER"/>
     </http>
 
 	<authentication-manager alias="authenticationManager">
-      <authentication-provider>
-          <user-service>
-            <user authorities="ROLE_USER" name="guest" password="guest"/>
-          </user-service>
-      </authentication-provider>
+      <authentication-provider user-service-ref='practicalUserDetailsServiceInMemory' />
     </authentication-manager>
+    
+    <beans:bean id="pud"
+        class="com.jverstry.DAO.PracticalUserDetailsDAOInMemory">
+    </beans:bean>
 
 </beans:beans>

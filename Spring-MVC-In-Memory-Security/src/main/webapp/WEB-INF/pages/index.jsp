@@ -9,21 +9,23 @@
 </head>
 <body>
     <h1>Spring In-Memory Security - CRUD Users</h1>
+    <br />
     <h2>Registered Users</h2>
+    <br />
     <table>
         <c:forEach items="${users}" var="item">
             <tr>
                 <td>${item.username}</td>
-                <td>${item.password}</td>
                 <td><a href="<c:url value='/delete/${item.id}'/>">delete</a></td>
             </tr>
         </c:forEach>
     </table>
-    <p>${errorMsg}</p>
+    <br />
     <h2>Create User</h2>
+    <br />
     <form action="<c:url value='/create'/>" method="get"
             accept-charset="ISO-8859-1">
-        Name <input type="text" name="name"><br /><br />
+        Name <input type="text" name="name"><br />
         Password <input type="text" name="password"><br /><br />
         <input type="submit" value="Create User">
     </form>
