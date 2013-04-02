@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.jverstry</groupId>
-	<artifactId>execute-sql-scripts-in-memory</artifactId>
+	<artifactId>execute-acl-sql-scripts-in-memory</artifactId>
 	<version>1.0.0</version>
-	<name>Execute-SQL-Scripts-In-Memory</name>
+	<name>Execute-ACL-SQL-Scripts-In-Memory</name>
 	<packaging>war</packaging>
 
 	<properties>

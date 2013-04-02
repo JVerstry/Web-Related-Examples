@@ -4,10 +4,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Spring Execute Scripts In-Memory</title>
+  <title>Spring Execute ACL Script In-Memory</title>
 </head>
 <body>
-    <h1>Spring Execute Scripts In-Memory</h1>
+    <h1>Spring Execute ACL Script In-Memory</h1>
     List of tables:
     <ul>
     <c:forEach items="${tables}" var="item">

@@ -1,9 +1,5 @@
 package com.jverstry.Configuration;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.Charset;
-import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -32,27 +28,6 @@ public class InMemoryDataSource implements DisposableBean {
         
 	}
     
-    @SuppressWarnings("AssignmentToMethodParameter")
-    public static String getResourceAsString(String jarPath, String encoding) {
-        
-        if ( encoding == null ) {
-            encoding = Charset.defaultCharset().name();
-        }
-        
-        InputStream IS = InMemoryDataSource.class.getResourceAsStream(jarPath);
-        
-        String result = null;
-        
-        try {
-            result = IOUtils.toString(IS, encoding);
-        } catch (IOException ex) {
-            // We go silent
-        }
-        
-        return result;
-        
-    }
-        
     @Override
     public void destroy() {
 
