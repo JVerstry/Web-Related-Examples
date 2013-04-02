@@ -11,7 +11,7 @@
     List of tables:
     <ul>
     <c:forEach items="${tables}" var="item">
-        <li>${item}
+        <li>${item}</li>
     </c:forEach>
     </ul>
 </body>
