@@ -4,8 +4,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Spring In-Memory Security</title>
-  <link rel="stylesheet" type="text/css" href="<c:url value='/resources/index.css'/>" media="screen">
+  <title>Spring Customized User Creation</title>
+  <link rel="stylesheet" type="text/css"
+        href="<c:url value='/resources/index.css'/>" media="screen">
 </head>
 <body>
     <h1>Creating User '${username}'</h1>

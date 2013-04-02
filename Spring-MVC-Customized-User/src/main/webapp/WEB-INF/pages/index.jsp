@@ -4,11 +4,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Spring In-Memory Security</title>
-  <link rel="stylesheet" type="text/css" href="<c:url value='/resources/index.css'/>" media="screen">
+  <title>Spring Customized User</title>
+  <link rel="stylesheet" type="text/css"
+        href="<c:url value='/resources/index.css'/>" media="screen">
 </head>
 <body>
-    <h1>Spring In-Memory Security - CRUD Users</h1>
+    <h1>Spring Customized User Create/Delete</h1>
     <br />
     <h2>Registered Users</h2>
     <br />
