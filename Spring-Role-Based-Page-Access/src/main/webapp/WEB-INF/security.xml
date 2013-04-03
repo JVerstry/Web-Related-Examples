@@ -1,0 +1,50 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+  xmlns:beans="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+    <!-- Enabling Security annotation -->
+    <global-method-security secured-annotations="enabled" />    
+    
+    <!-- No security on css, js, images, etc... folder -->
+    <http pattern="/resources/**" security="none"/>
+    
+    <http>
+        
+        <http-basic />
+        
+        <form-login login-page="/login.jsp" default-target-url="/index.jsp" />
+        
+        <anonymous enabled="false" />
+        
+        <access-denied-handler error-page="/accessDenied.jsp" />
+        
+        <!-- Anticipating on login logout issues -->
+        <logout logout-url="/" delete-cookies="JSESSIONID" />  
+        
+        <session-management invalid-session-url="/invalidSession.jsp"
+                session-authentication-error-url="/invalidSession.jsp"
+                session-fixation-protection="newSession" />
+            <concurrency-control max-sessions="1" error-if-maximum-exceeded="true" />
+        </session-management>
+        
+    </http>
+
+    <!-- URL Intercept is perform at the controller level -->
+
+ authentication-failure-url
+
+	<authentication-manager alias="authenticationManager"
+            erase-credentials="true" />
+        <authentication-provider user-service-ref="pudsim"
+            ref="myAP" />
+    </authentication-manager>
+    
+    <beans:bean id="myAP"
+        class="com.jverstry.DAO.PracticalUserDetailsDAOInMemory">
+    </beans:bean>
+    
+</beans:beans>
