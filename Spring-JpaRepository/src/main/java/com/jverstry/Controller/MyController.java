@@ -1,8 +1,5 @@
 package com.jverstry.Controller;
 
-import com.jverstry.DAO.PracticalUserDetailsImpl;
-import com.jverstry.UserDetailsService.PracticalUserDetailsServiceInMemory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,15 +10,15 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MyController {
 	
-    @Autowired
-    private PracticalUserDetailsServiceInMemory pudm;
+//    @Autowired
+//    private PracticalUserDetailsServiceInMemory pudm;
 
 	@RequestMapping(value = "/")
 	public ModelAndView index() {
         
         ModelAndView result = new ModelAndView("index");
 
-        result.addObject("users", this.pudm.getUsers());
+//        result.addObject("users", this.pudm.getUsers());
         
         return result;
         
@@ -32,7 +29,7 @@ public class MyController {
             @PathVariable(value="id")
             String id) {
         
-        this.pudm.deleteUser(Long.parseLong(id));
+//        this.pudm.deleteUser(Long.parseLong(id));
         
         return "redirect:/";
         
@@ -61,7 +58,7 @@ public class MyController {
         }
         
         if ( errorMsg.isEmpty() ) {
-            this.pudm.upsertUser(new PracticalUserDetailsImpl(name, password));
+  //          this.pudm.upsertUser(new PracticalUserDetailsImpl(name, password));
         }
     
         ModelAndView result = new ModelAndView("create");
