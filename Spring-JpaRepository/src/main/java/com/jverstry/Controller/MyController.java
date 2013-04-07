@@ -18,7 +18,6 @@ public class MyController {
 	public ModelAndView index() {
         
         ModelAndView result = new ModelAndView("index");
-
         result.addObject("items", this.someItemService.getAll());
         
         return result;
