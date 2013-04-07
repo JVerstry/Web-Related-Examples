@@ -10,9 +10,7 @@
 
 	<context-param>
     	<param-name>contextConfigLocation</param-name>
-    	<param-value>
-			com.jverstry.Configuration
-		</param-value>
+    	<param-value>com.jverstry.Configuration</param-value>
 	</context-param>
 
 	<listener>
@@ -37,5 +35,5 @@
 	<welcome-file-list>
 		<welcome-file></welcome-file>
 	</welcome-file-list>
-
+    
 </web-app>
